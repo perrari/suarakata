@@ -22,3 +22,12 @@
 Route.get('/', async ({ view }) => {
   return view.render('utama')
 })
+
+Route.get('/contoh', async ({ view }) => {
+  return view.render('contoh')
+})
+
+
+Route.get('/demo', async ({ view }) => {
+  return view.render('demo')
+})

@@ -1,444 +1,138 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/utama.css">
-  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
-  @entryPointStyles('app')
-  @entryPointScripts('app')
-</head>
-<body class="bg-black">
-  <audio id="myAudio" class="hidden">
-    <source src="/img/audio.mp3" type="audio/mpeg">
-  </audio>
-  <div id="floating-button">
-    <div id="floating-navbar" class=" text-lg font-semibold font-sans " >
-      <ul>
-        <li><a href="#home" >Home</a></li>
-        <li><a href="#profil">Profile</a></li>
-        <li><a href="#porto">Project</a></li>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+@include('partial/head')
+
+<body id="top">
+@include('partial/navbar')
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div class="container">
+    <div class="content">
+      <div id="featured_slide">
+        <ul id="featurednews">
+          <li><img src="img/demo/1.gif" alt="" />
+            <div class="panel-overlay">
+              <h2>INI NANTI UNTUK BERITA UTAMA 1</h2>
+              <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet.<br />
+                <a href="#">Lanjutkan Membaca &raquo;</a></p>
+            </div>
+          </li>
+          <li><img src="img/demo/2.gif" alt="" />
+            <div class="panel-overlay">
+              <h2>INI NANTI UNTUK BERITA UTAMA 2</h2>
+              <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet.<br />
+                <a href="#">Lanjutkan Membaca &raquo;</a></p>
+            </div>
+          </li>
+          <li><img src="img/demo/3.gif" alt="" />
+            <div class="panel-overlay">
+              <h2>INI NANTI UNTUK BERITA UTAMA 3</h2>
+              <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet.<br />
+                <a href="#">Lanjutkan Membaca &raquo;</a></p>
+            </div>
+          </li>
+          <li><img src="img/demo/4.gif" alt="" />
+            <div class="panel-overlay">
+              <h2>INI NANTI UNTUK BERITA UTAMA 4</h2>
+              <p>Justolacus eger at pede felit in dictum sempus elit curabitur ipsum. Ametpellentum.<br />
+                <a href="#">Lanjutkan Membaca &raquo;</a></p>
+            </div>
+          </li>
+          <li><img src="img/demo/5.gif" alt="" />
+            <div class="panel-overlay">
+              <h2>INI NANTI UNTUK BERITA UTAMA 5</h2>
+              <p>Nonnam aenenasce morbi liberos malesuada risus id donec volutpat estibulum curabitae.<br />
+                <a href="#">Lanjutkan Membaca &raquo;</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column">
+      <ul class="latestnews">
+        <li><img src="img/demo/100x100.gif" alt="" />
+          <p><strong><a href="#">Ini nanti sidebar berita umum</a></strong> Nullamlacus dui ipsum cons eque loborttis non euis que morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque.</p>
+        </li>
+        <li><img src="img/demo/100x100.gif" alt="" />
+          <p><strong><a href="#">Ini nanti sidebar berita umum</a></strong> Nullamlacus dui ipsum cons eque loborttis non euis que morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque.</p>
+        </li>
+        <li class="last"><img src="img/demo/100x100.gif" alt="" />
+          <p><strong><a href="#">Ini nanti sidebar berita umum</a></strong> Nullamlacus dui ipsum cons eque loborttis non euis que morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque.</p>
+        </li>
       </ul>
     </div>
+    <br class="clear" />
   </div>
-  
-   <!-- bento box -->
-   <div id="home" class="container mx-auto px-4 pb-8">
-    <div class="grid grid-cols-3 gap-4">
-      <div id="kotak1" class=" rounded-3xl" style="background-image: url('/img/kiriatas.png'); background-size: contain; background-repeat:no-repeat; ">
-        <div id="clock"></div>
-      </div>
-      <div id="kotak2" class="px-4 rounded-md" style="background-image: url('/img/boba.png'); background-size: contain; background-repeat:no-repeat; ">
-        <div class="container px-6 gap-4 xl:py-6 md:py-2  mx-auto flex justify-center items-center">
-         <!-- Tombol Profile -->
-         <a href="#profil" class="icon-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="profile"><path fill="#231f20" d="M256 250.8a73.34 73.34 0 1 1 73.33-73.34A73.41 73.41 0 0 1 256 250.8zm0-125.53a52.2 52.2 0 1 0 52.19 52.19A52.25 52.25 0 0 0 256 125.27zm117.07 282.6H138.93l-10.57-10.57a127.64 127.64 0 1 1 255.28 0zM150 386.73h212a106.51 106.51 0 0 0-212 0z"></path></svg>
-         </a>
-          <!-- Tombol Home -->
-       <a href="#home" class="icon-button">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-          <path d="M39.5,43h-9c-1.381,0-2.5-1.119-2.5-2.5v-9c0-1.105-0.895-2-2-2h-4c-1.105,0-2,0.895-2,2v9c0,1.381-1.119,2.5-2.5,2.5h-9	C7.119,43,6,41.881,6,40.5V21.413c0-2.299,1.054-4.471,2.859-5.893L23.071,4.321c0.545-0.428,1.313-0.428,1.857,0L39.142,15.52	C40.947,16.942,42,19.113,42,21.411V40.5C42,41.881,40.881,43,39.5,43z"></path>
-          </svg>
-       </a>
-       <!-- Tombol Project -->
-       <a href="#porto" class="icon-button">
-        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 116" viewBox="0 0 48.99 48.99" id="task"><rect width="46.99" height="46.99" x="1" y="1" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2" rx="23.5"></rect><rect width="24.03" height="21.26" x="12.48" y="15.49" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="1.46"></rect><path fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.2 12.71v4.75M24.5 12.71v4.75M32.8 12.71v4.75M18.33 25.94l4.22 4.23 8.11-8.11"></path></svg>
-       </a>
-       </div>
-      </div>      
-      <div id="kotak3" class=" p-4 rounded-3xl">
-       
-      </div>
-      <div id="kotak4" class="px-4 pb-0 rounded-md">
-       
-      </div>
-      <div id="kotak5" class=" px-4 rounded-md">
-      </div>
-      <div id="kotak6" class=" md:px-4 rounded-md">
-        <div class="relative">
-          <img src="/img/prak1.png" id="prak" class="rounded-md cursor-pointer " data-hover-image="/img/prak2.png" />
-          <div class="absolute hidden w-48 bg-white opacity-90 rounded-md shadow-lg z-10 top-full left-0">
-            <a href="#" class="block px-8 py-4 hover:bg-gray-100">Guru SMK PGRI 7 Singhasari</a>
-            <a href="https://smasannur.sch.id/" class="block px-8 py-4 hover:bg-gray-100">Guru SMA An-Nur 2 Bululawang</a>
-          </div>
-        </div>
-      </div>
-      <div id="kotak7" class=" pt-0 rounded-md">
-        <img id="name1" src="/img/name.png" class=" xl:w-full xl:h-28 md:w-full md:h-20 rounded-md" />
-      </div>
-      <div id="kotak8" class=" md:p-4 rounded-md">
-      </div>
-      <div id="kotak9" class=" md:pl-24 md:py-4 rounded-md">
-        <div class="relative">
-          <img src="/img/dev1.png" id="dev" class="rounded-md cursor-pointer " data-hover-image="/img/dev2.png" />        
-          <div class="absolute hidden w-48 bg-white opacity-90 rounded-md shadow-lg z-10 top-full left-0">
-            <a href="#" class="block px-8 py-4 hover:bg-gray-100">Web Developer</a>
-            <a href="#" class="block px-8 py-4 hover:bg-gray-100">Game Developer</a>
-          </div>
-        </div>
-      </div>
-      <div id="kotak10" class=" p-4 rounded-3xl">
-       
-      </div>
-      <div id="kotak11" class=" p-4 rounded-md">
-      </div>
-      <div id="kotak12" class=" md:p-4 rounded-md">
-        <div class="relative">
-          <img src="/img/ceo1.png"  id="ceo" class="rounded-md cursor-pointer " data-hover-image="/img/ceo2.png" />
-          <div class="absolute hidden w-48 bg-white opacity-90 rounded-md shadow-lg z-10 top-full left-0">
-            <a href="https://macroma.id/" class="block px-8 py-4 hover:bg-gray-100">Ceo Macroma Media</a>
-          </div>
-        </div>
-      </div>
-      <div id="kotak13" class="bg-white p-4 rounded-3xl">
-        <h2>About Me</h2>
-        <p>Hai teman baru ! <a class=" font-extrabold" href="#profil">mari berkenalan . . .</a> </p>
-      </div>
-      <div id="kotak14" class=" p-4 rounded-md">
-      </div>
-      <div id="kotak15" class="bg-white opacity-80 p-4  rounded-3xl">
-        <div class="flex flex-wrap xl:px-10">
-        <!-- Tombol Instagram -->
-        <a href="https://www.instagram.com/perrarii/" class="icon-button">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-            <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
-            </svg>
-        </a>
-    
-        <!-- Tombol Facebook -->
-        <a href="#" class="icon-button">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-            <path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 25.832031 46 A 1.0001 1.0001 0 0 0 26.158203 46 L 31.832031 46 A 1.0001 1.0001 0 0 0 32.158203 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 33 44 L 33 30 L 36.820312 30 L 38.220703 23 L 33 23 L 33 21 C 33 20.442508 33.05305 20.398929 33.240234 20.277344 C 33.427419 20.155758 34.005822 20 35 20 L 38 20 L 38 14.369141 L 37.429688 14.097656 C 37.429688 14.097656 35.132647 13 32 13 C 29.75 13 27.901588 13.896453 26.71875 15.375 C 25.535912 16.853547 25 18.833333 25 21 L 25 23 L 22 23 L 22 30 L 25 30 L 25 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 32 15 C 34.079062 15 35.38736 15.458455 36 15.701172 L 36 18 L 35 18 C 33.849178 18 32.926956 18.0952 32.150391 18.599609 C 31.373826 19.104024 31 20.061492 31 21 L 31 25 L 35.779297 25 L 35.179688 28 L 31 28 L 31 44 L 27 44 L 27 28 L 24 28 L 24 25 L 27 25 L 27 21 C 27 19.166667 27.464088 17.646453 28.28125 16.625 C 29.098412 15.603547 30.25 15 32 15 z"></path>
-            </svg>
-        </a>
-    
-        <!-- Tombol WhatsApp -->
-        <a href="https://wa.me/6285155441510" class="icon-button">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-            <path d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 29.079097 3.1186875 32.88588 4.984375 36.208984 L 2.0371094 46.730469 A 1.0001 1.0001 0 0 0 3.2402344 47.970703 L 14.210938 45.251953 C 17.434629 46.972929 21.092591 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 21.278025 46 17.792121 45.029635 14.761719 43.333984 A 1.0001 1.0001 0 0 0 14.033203 43.236328 L 4.4257812 45.617188 L 7.0019531 36.425781 A 1.0001 1.0001 0 0 0 6.9023438 35.646484 C 5.0606869 32.523592 4 28.890107 4 25 C 4 13.390466 13.390466 4 25 4 z M 16.642578 13 C 16.001539 13 15.086045 13.23849 14.333984 14.048828 C 13.882268 14.535548 12 16.369511 12 19.59375 C 12 22.955271 14.331391 25.855848 14.613281 26.228516 L 14.615234 26.228516 L 14.615234 26.230469 C 14.588494 26.195329 14.973031 26.752191 15.486328 27.419922 C 15.999626 28.087653 16.717405 28.96464 17.619141 29.914062 C 19.422612 31.812909 21.958282 34.007419 25.105469 35.349609 C 26.554789 35.966779 27.698179 36.339417 28.564453 36.611328 C 30.169845 37.115426 31.632073 37.038799 32.730469 36.876953 C 33.55263 36.755876 34.456878 36.361114 35.351562 35.794922 C 36.246248 35.22873 37.12309 34.524722 37.509766 33.455078 C 37.786772 32.688244 37.927591 31.979598 37.978516 31.396484 C 38.003976 31.104927 38.007211 30.847602 37.988281 30.609375 C 37.969311 30.371148 37.989581 30.188664 37.767578 29.824219 C 37.302009 29.059804 36.774753 29.039853 36.224609 28.767578 C 35.918939 28.616297 35.048661 28.191329 34.175781 27.775391 C 33.303883 27.35992 32.54892 26.991953 32.083984 26.826172 C 31.790239 26.720488 31.431556 26.568352 30.914062 26.626953 C 30.396569 26.685553 29.88546 27.058933 29.587891 27.5 C 29.305837 27.918069 28.170387 29.258349 27.824219 29.652344 C 27.819619 29.649544 27.849659 29.663383 27.712891 29.595703 C 27.284761 29.383815 26.761157 29.203652 25.986328 28.794922 C 25.2115 28.386192 24.242255 27.782635 23.181641 26.847656 L 23.181641 26.845703 C 21.603029 25.455949 20.497272 23.711106 20.148438 23.125 C 20.171937 23.09704 20.145643 23.130901 20.195312 23.082031 L 20.197266 23.080078 C 20.553781 22.728924 20.869739 22.309521 21.136719 22.001953 C 21.515257 21.565866 21.68231 21.181437 21.863281 20.822266 C 22.223954 20.10644 22.02313 19.318742 21.814453 18.904297 L 21.814453 18.902344 C 21.828863 18.931014 21.701572 18.650157 21.564453 18.326172 C 21.426943 18.001263 21.251663 17.580039 21.064453 17.130859 C 20.690033 16.232501 20.272027 15.224912 20.023438 14.634766 L 20.023438 14.632812 C 19.730591 13.937684 19.334395 13.436908 18.816406 13.195312 C 18.298417 12.953717 17.840778 13.022402 17.822266 13.021484 L 17.820312 13.021484 C 17.450668 13.004432 17.045038 13 16.642578 13 z M 16.642578 15 C 17.028118 15 17.408214 15.004701 17.726562 15.019531 C 18.054056 15.035851 18.033687 15.037192 17.970703 15.007812 C 17.906713 14.977972 17.993533 14.968282 18.179688 15.410156 C 18.423098 15.98801 18.84317 16.999249 19.21875 17.900391 C 19.40654 18.350961 19.582292 18.773816 19.722656 19.105469 C 19.863021 19.437122 19.939077 19.622295 20.027344 19.798828 L 20.027344 19.800781 L 20.029297 19.802734 C 20.115837 19.973483 20.108185 19.864164 20.078125 19.923828 C 19.867096 20.342656 19.838461 20.445493 19.625 20.691406 C 19.29998 21.065838 18.968453 21.483404 18.792969 21.65625 C 18.639439 21.80707 18.36242 22.042032 18.189453 22.501953 C 18.016221 22.962578 18.097073 23.59457 18.375 24.066406 C 18.745032 24.6946 19.964406 26.679307 21.859375 28.347656 C 23.05276 29.399678 24.164563 30.095933 25.052734 30.564453 C 25.940906 31.032973 26.664301 31.306607 26.826172 31.386719 C 27.210549 31.576953 27.630655 31.72467 28.119141 31.666016 C 28.607627 31.607366 29.02878 31.310979 29.296875 31.007812 L 29.298828 31.005859 C 29.655629 30.601347 30.715848 29.390728 31.224609 28.644531 C 31.246169 28.652131 31.239109 28.646231 31.408203 28.707031 L 31.408203 28.708984 L 31.410156 28.708984 C 31.487356 28.736474 32.454286 29.169267 33.316406 29.580078 C 34.178526 29.990889 35.053561 30.417875 35.337891 30.558594 C 35.748225 30.761674 35.942113 30.893881 35.992188 30.894531 C 35.995572 30.982516 35.998992 31.07786 35.986328 31.222656 C 35.951258 31.624292 35.8439 32.180225 35.628906 32.775391 C 35.523582 33.066746 34.975018 33.667661 34.283203 34.105469 C 33.591388 34.543277 32.749338 34.852514 32.4375 34.898438 C 31.499896 35.036591 30.386672 35.087027 29.164062 34.703125 C 28.316336 34.437036 27.259305 34.092596 25.890625 33.509766 C 23.114812 32.325956 20.755591 30.311513 19.070312 28.537109 C 18.227674 27.649908 17.552562 26.824019 17.072266 26.199219 C 16.592866 25.575584 16.383528 25.251054 16.208984 25.021484 L 16.207031 25.019531 C 15.897202 24.609805 14 21.970851 14 19.59375 C 14 17.077989 15.168497 16.091436 15.800781 15.410156 C 16.132721 15.052495 16.495617 15 16.642578 15 z"></path>
-            </svg>
-        </a>
-    
-        <!-- Tombol Email -->
-        <a href="mailto:mferrarifirmansyah@gmail.com" class="icon-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-                <path d="M3 5.016v13.969c0 .563.422.984.984.984h16.031c.563 0 .984-.422.984-.984v-13.969c0-.563-.422-.984-.984-.984h-16.031c-.563 0-.984.422-.984.984zM20.016 6l-8.016 5.25-8.016-5.25h16.031zM20.016 18c0 .563-.422 1.031-.984 1.031h-14.016c-.563 0-.984-.469-.984-1.031v-9.516l7.5 4.969 7.5-4.969v9.516z"/>
-            </svg>
-        </a>
-    
-        <!-- Tombol GitHub -->
-        <a href="https://github.com/perrari" class="icon-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-                <path d="M12 2C6.475 2 2 6.475 2 12c0 4.419 2.865 8.17 6.839 9.49.5.092.682-.216.682-.481 0-.237-.009-.864-.013-1.695-2.782.604-3.368-1.34-3.368-1.34-.455-1.153-1.114-1.461-1.114-1.461-.911-.623.069-.609.069-.609 1.005.071 1.531 1.033 1.531 1.033.891 1.525 2.34 1.084 2.91.829.091-.645.351-1.084.638-1.334-2.233-.254-4.573-1.116-4.573-4.957 0-1.094.39-1.988 1.032-2.684-.103-.255-.448-1.27.098-2.646 0 0 .842-.269 2.755 1.025.8-.223 1.653-.334 2.503-.338.849.004 1.702.115 2.503.338 1.913-1.294 2.753-1.025 2.753-1.025.548 1.376.202 2.391.1 2.646.644.696 1.03 1.59 1.03 2.684 0 3.851-2.344 4.7-4.582 4.947.36.31.681.924.681 1.858 0 1.343-.012 2.424-.012 2.751 0 .267.18.578.688.479C19.137 20.166 22 16.415 22 12c0-5.525-4.475-10-10-10z"/>
-            </svg>
-        </a>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="adblock">
+    <div class="fl_left"><a href="#"><img src="img/demo/468x60.gif" alt="" /></a></div>
+    <div class="fl_right"><a href="#"><img src="img/demo/468x60.gif" alt="" /></a></div>
+    <br class="clear" />
+  </div>
+  <div id="hpage_cats">
+    <div class="fl_left">
+      <h2><a href="#">Lingkungan &raquo;</a></h2>
+      <img src="img/demo/100x100.gif" alt="" />
+      <p><strong><a href="#">Ini nanti  berita umum</a></strong></p>
+      <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+    </div>
+    <div class="fl_right">
+      <h2><a href="#">Teknologi &raquo;</a></h2>
+      <img src="img/demo/100x100.gif" alt="" />
+      <p><strong><a href="#">Ini nanti  berita umum</a></strong></p>
+      <p>This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer.</p>
+    </div>
+    <br class="clear" />
+    <div class="fl_left">
+      <h2><a href="#">Hiburan &raquo;</a></h2>
+      <img src="img/demo/100x100.gif" alt="" />
+      <p><strong><a href="#">Ini nanti  berita umum</a></strong></p>
+      <p>Morbitincidunt maurisque eros molest nunc anteget sed vel lacus mus semper. Anterdumnullam interdum eros dui urna consequam ac nisl nullam ligula vestassa. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+    </div>
+    <div class="fl_right">
+      <h2><a href="#">Politik &raquo;</a></h2>
+      <img src="img/demo/100x100.gif" alt="" />
+      <p><strong><a href="#">Ini nanti  berita umum</a></strong></p>
+      <p>Morbitincidunt maurisque eros molest nunc anteget sed vel lacus mus semper. Anterdumnullam interdum eros dui urna consequam ac nisl nullam ligula vestassa. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div class="container">
+    <div class="content">
+      <div id="hpage_latest">
+        <h2>Yang Mungkin Anda Suka</h2>
+        <ul>
+          <li><img src="img/demo/190x130.gif" alt="" />
+            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
+            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et.</p>
+            <p class="readmore"><a href="#">Lanjutkan Membaca &raquo;</a></p>
+          </li>
+          <li><img src="img/demo/190x130.gif" alt="" />
+            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
+            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et.</p>
+            <p class="readmore"><a href="#">Lanjutkan Membaca &raquo;</a></p>
+          </li>
+          <li class="last"><img src="img/demo/190x130.gif" alt="" />
+            <p>Nullamlacus dui ipsum conseqlo borttis non euisque morbipen a sdapibulum orna.</p>
+            <p>Urnau ltrices quis curabitur pha sellent esque congue magnisve stib ulum quismodo nulla et.</p>
+            <p class="readmore"><a href="#">Lanjutkan Membaca &raquo;</a></p>
+          </li>
+        </ul>
+        <br class="clear" />
       </div>
     </div>
-    
-      <div id="kotak16" class="bg-white opacity-80 pl-4 pt-4 rounded-3xl">
-        <h1 class="mb-4 font-extrabold">Recent Project</h1>
-        <a href="#link project terbaru" class=" font-semibold"> (Tanggal Upload / Pengerjaan) Project Name</a><br>
-      </div>
-      <div id="kotak17" class="pl-4 pt-4 rounded-3xl">
-      </div>
-      <div id="kotak18" class="bg-white opacity-80 pl-4 pt-4 rounded-3xl">
-        <h1 id="eb" class="mb-4 font-extrabold">Education Background</h1>
-        <div class="flex flex-wrap items-center">
-          <div class="relative">
-            <img src="/img/unikama.png" alt="" id="edupic" class="xl:w-20 xl:h-20 md:w-14 md:h-14 sm:w-8 sm:mr-1 sm:mb-1 sm:h-8 mr-4 mb-4 rounded-xl grayscale hover:grayscale-0" data-hover-image="/img/unikama.png"/>
-            <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center  opacity-0 transition-all duration-300 ease-in-out hover:opacity-100">
-              <p class="bg-white px-4 py-2 sm:py-2 sm:px-1 rounded-md shadow-sm">
-               Universitas PGRI Kanjuruhan Malang 
-              </p>
-            </div>
-          </div>
-          <div class="relative">
-            <img src="/img/mutu.png" alt="" id="edupic" class="xl:w-20 xl:h-20 md:w-14 md:h-14 sm:w-8 sm:h-8 sm:mr-1 sm:mb-1 mr-4 mb-4 rounded-xl grayscale hover:grayscale-0" data-hover-image="/img/mutu.png" />
-            <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center  opacity-0 transition-all duration-300 ease-in-out hover:opacity-100">
-              <p class="bg-white px-4 py-2 sm:py-2 sm:px-1 rounded-md shadow-sm">
-               SMK Muhammadiyah 7 Gondanglegi
-              </p>
-            </div>
-          </div>
-          <div class="relative">
-            <img src="/img/smp.png" alt="" id="edupic" class="xl:w-20 xl:h-20 md:w-14 md:h-14 sm:w-8 sm:h-8 sm:mr-1 sm:mb-1 mr-4 mb-4 rounded-xl grayscale hover:grayscale-0" data-hover-image="/img/smp.png" />
-            <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center  opacity-0 transition-all duration-300 ease-in-out hover:opacity-100">
-              <p class="bg-white px-4 py-2 sm:py-2 sm:px-1 rounded-md shadow-sm">
-               SMPN 2 Bululawang
-              </p>
-            </div>
-          </div>
-          <div class="relative">
-            <img src="/img/sd.png" alt="" id="edupic" class="xl:w-20 xl:h-20 md:w-14 md:h-14 sm:w-8 sm:h-8 sm:mr-1 sm:mb-1 mr-4 mb-4 rounded-xl grayscale hover:grayscale-0"  data-hover-image="/img/sd.png"/>
-            <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 transition-all duration-300 ease-in-out hover:opacity-100">
-              <p class="bg-white px-4 py-2 sm:py-2 sm:px-1 rounded-md shadow-sm">
-               SDN 2 Bululawang
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="column">
+      <div class="holder"><a href="#"><img src="img/demo/300x250.gif" alt="" /></a></div>
+      <div class="holder"><a href="#"><img src="img/demo/300x80.gif" alt="" /></a></div>
     </div>
+    <br class="clear" />
   </div>
-   <!-- akhir bento box -->
-
-   <!-- profil -->
-   <div id="profil" class="container mx-auto px-4" style=" background-image: url('/img/bgprofil.jpg'); background-size: cover; ">
-    <div class="text-center pt-7 pb-7">
-      <img src="/img/profile.png" class="" alt="">
-    </div>
-    <div class="grid md:grid-cols-2 gap-4">
-      <div class="col-md-6 bg-white opacity-80 rounded-lg">
-        <p class=" text-justify lg:text-lg md:text-base sm:text-sm mx-8 mt-8 ">Nama saya, <Span class=" font-bold">M FERRARI FIRMANSYAH.</Span></p>
-        <p class=" text-justify lg:text-lg md:text-base sm:text-sm mx-8 mb-8">Saya seorang yang memiliki passion di bidang pendidikan dan teknologi. Saya menekuni sebagai guru di SMK dan juga sebagai freelance web programmer. Selain itu, saya juga merupakan CEO dari sebuah startup teknologi yang bergerak di bidang jasa layanan digital.
-
-          Saya memiliki jiwa yang ingin terus belajar dan berkembang. Saya selalu tertarik untuk mempelajari hal-hal baru dan melakukan hal-hal yang saya sukai. Akhir-akhir ini, saya mulai tertarik untuk terjun ke industri kreatif sebagai konten kreator.
-          
-          Saya yakin bahwa dengan kombinasi pengalaman, passion, dan jiwa belajar yang tinggi, saya dapat memberikan kontribusi yang positif bagi orang lain. Untuk mengenal saya lebih lanjut anda dapat menghubungi kontak yang tersedia. Terimakasih.
-        </p>
-      </div>
-      <div class="col-md-6">
-        <img src="/img/picprofil.jpg" id="gambarprofil" class="rounded-xl" alt="Gambar Profil">
-      </div>
-    </div>
-    <div class="text-center py-6 flex justify-center">
-      <a href="https://www.instagram.com/perrarii/" class="get-in-touch">
-        <img src="/img/git.png" alt="get in touch" class=" sm:w-48 hover:transform hover:scale-110">
-      </a>
-    </div>
-  </div>
-   <!-- akhir  profil -->
-   
-   <!-- Porto --->
-  <div id="porto" class="container mx-auto px-4" style=" background-image: url('/img/bgporto.jpg'); background-size: cover; ">
-    <div class="pt-10 pb-5  flex items-center">
-      <img src="/img/project.png" class="md:mx-auto mx-auto" alt="">
-    </div>   
-    <div class=" mx-auto">
-      <div class="carousel  shadow-md rounded-3xl">
-          <div class="carousel-inner">
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png" >
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 1. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png" >
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 2. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png" alt="Slide 3">
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 3. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png" alt="Slide 4">
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 4. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png" alt="Slide 5">
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 5. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png" alt="Slide 6">
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 6. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png" alt="Slide 7">
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 7. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png"  alt="Slide 8">
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 8. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-              <div class="carousel-item">
-                  <img src="/img/testcaro.png"  alt="Slide 9">
-                  <div id="judulproject" class="rounded-xl ml-10 mr-10">Judul Project</div>
-                  <div id="caption" class="rounded-xl ml-10 mr-10">Keterangan Gambar 9. Ini adalah contoh keterangan yang lebih panjang. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-              </div>
-          </div>
-          <div class="carousel-indicators">
-              <span class="carousel-indicator"></span>
-              <span class="carousel-indicator"></span>
-              <span class="carousel-indicator"></span>
-          </div>
-      </div>
-  </div>
-  <div class="pt-12 pb-12  flex items-center">
-  </div> 
-  </div>
-
-  
-   <!-- Akhir Porto --->
+</div>
+<!-- ####################################################################################################### -->
+@include('partial/footer')
 </body>
-
-<script>
-// Code for both dropdown menus
-const dropdownButtons = document.querySelectorAll('.relative img');
-
-dropdownButtons.forEach(button => {
-  const defaultImage = button.src; // Store the original image src
-  const hoverImage = button.dataset.hoverImage;
-  const dropdownMenu = button.nextElementSibling;
-
-  // Function to toggle dropdown menus
-  function toggleDropdown() {
-    dropdownMenu.classList.toggle('hidden');
-  }
-
-  // Click event listener for both buttons
-  button.addEventListener('click', toggleDropdown);
-
-  // Close dropdown when clicking outside (both menus)
-  document.addEventListener('click', (event) => {
-    if (!event.target.closest('.relative')) {
-      const openDropdowns = document.querySelectorAll('.relative .absolute:not(.hidden)');
-      openDropdowns.forEach(dropdown => dropdown.classList.add('hidden'));
-    }
-  });
-
-  // Close dropdown when clicking another button
-  dropdownButtons.forEach(otherButton => {
-    if (button !== otherButton) {
-      otherButton.addEventListener('click', () => {
-        dropdownMenu.classList.add('hidden');
-      });
-    }
-  });
-
-  // Hover/unhover image changes (both menus)
-  button.addEventListener('mouseover', () => {
-    button.src = hoverImage;
-  });
-
-  button.addEventListener('mouseout', () => {
-    // Restore the original image based on the button's src
-    button.src = defaultImage;
-  });
-});
-
-//jam
-const clock = document.getElementById('clock');
-
-    function updateClock() {
-      const now = new Date();
-      const hours = now.getHours().toString().padStart(2, '0');
-      const minutes = now.getMinutes().toString().padStart(2, '0');
-      const seconds = now.getSeconds().toString().padStart(2, '0');
-
-      // Determine AM/PM
-      const isAM = hours < 12 ? 'AM' : 'PM';
-      const displayHours = hours === 0 ? 12 : (hours > 12 ? hours - 12 : hours);
-
-      clock.textContent = `${displayHours}:${minutes}:${seconds} ${isAM}`;
-    }
-
-    updateClock(); // Initial display
-    setInterval(updateClock, 1000); // Update every second
-//akhir jam
-
-//scroll profil
-const profileButton = document.querySelector('.icon-button');
-const profileSection = document.getElementById('profil');
-
-profileButton.addEventListener('click', (event) => {
-  event.preventDefault();
-
-  // Animasi scroll ke bagian profil
-  window.scroll({
-    top: profileSection.offsetTop,
-    behavior: 'smooth',
-  });
-});
-// akhir scroll profil
-
-// Menambahkan event listener untuk resize window
-window.addEventListener('resize', () => {
-  // Memperbarui posisi button dan navbar saat window diubah ukurannya
-  const button = document.getElementById('floating-button');
-  const navbar = document.getElementById('floating-navbar');
-  button.style.top = `${50 - button.offsetHeight / 2}%`;
-  navbar.style.top = `${50 - navbar.offsetHeight / 2}%`;
-});
-
-const navLinks = document.querySelectorAll('#floating-navbar a');
-
-navLinks.forEach(link => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault(); // Mencegah navigasi default
-
-    const targetElement = document.querySelector(link.getAttribute('href'));
-    const targetY = targetElement.offsetTop;
-
-    // Scroll halus ke target
-    window.scrollTo({
-      top: targetY,
-      behavior: 'smooth',
-      duration: 3000,
-    });
-  });
-});
-
-//carousel
-document.addEventListener("DOMContentLoaded", function () {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            const carouselIndicators = document.querySelector('.carousel-indicators');
-            const totalItems = carouselItems.length;
-            const groupSize = 3;
-            const totalGroups = Math.ceil(totalItems / groupSize);
-            let currentIndex = 0;
-            let intervalId;
-
-            function showItem(index) {
-                if (index < 0) {
-                    index = totalItems - groupSize;
-                } else if (index >= totalItems) {
-                    index = 0;
-                }
-
-                const offset = -index * (100 / totalGroups);
-                carouselInner.style.transform = `translateX(${offset}%)`;
-                currentIndex = index;
-
-                // Update active indicator
-                const activeGroup = Math.floor(currentIndex / groupSize);
-                const indicatorHTML = Array.from(Array(totalGroups), (_, i) => `<span class="carousel-indicator ${i === activeGroup ? 'active' : ''}"></span>`).join('');
-                carouselIndicators.innerHTML = indicatorHTML;
-            }
-
-            function startCarousel() {
-                intervalId = setInterval(() => {
-                    showItem(currentIndex + groupSize);
-                }, 10000); // Interval set to 10 seconds
-            }
-
-            startCarousel();
-
-            // Click event for indicators
-            carouselIndicators.addEventListener('click', (event) => {
-                if (event.target.classList.contains('carousel-indicator')) {
-                    const clickedIndex = Array.from(carouselIndicators.children).indexOf(event.target);
-                    const targetGroupIndex = clickedIndex * groupSize;
-                    showItem(targetGroupIndex);
-                    clearInterval(intervalId); // Stop carousel on indicator click
-                    startCarousel(); // Restart carousel after clicking on indicator
-                }
-            });
-        });
-
-///audio
-document.addEventListener('DOMContentLoaded', function () {
-    var audio = document.getElementById('myAudio');
-    audio.src = audioSource;
-    audio.play();
-  });
-</script>
 </html>
