@@ -1,0 +1,392 @@
+#home {
+ background-image: url('/img/bghome.jpg'); 
+ background-size: cover;
+}
+
+#boba {
+  animation: fall-in 2s ease-in-out;
+}
+
+@keyframes fall-in {
+  0% {
+    top: -50vh;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#kiriatas {
+  animation: fall-in-kiriatas 2s ease-in-out;
+}
+
+@keyframes fall-in-kiriatas {
+  0% {
+    top: -50vh;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#prak {
+  animation: wipe-in 1s ease-in-out;
+}
+
+@keyframes wipe-in {
+  0% {
+    transform: translateX(+60%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#name1 {
+  animation: fade-in 2s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#dev {
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#ceo {
+  animation: wipe-in 2s ease-in-out;
+}
+
+@keyframes wipe-in {
+  0% {
+    transform: translateX(+60%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#kotak15 {
+  display: flex;
+  justify-content: space-around; /* Mengatur jarak antara tombol secara merata */
+  align-items: center; /* Mengatur penempatan tombol secara vertikal di tengah */
+  width: 100%; /* Mengatur lebar tombol */
+  height: 100%; /* Mengatur tinggi tombol */
+}
+
+.icon-button {
+  display: inline-block;
+  width: 40px; /* Lebar tombol */
+  height: 40px; /* Tinggi tombol */
+  background-color: #ffffff; /* Warna latar belakang */
+  border-radius: 50%; /* Mengatur border radius agar menjadi lingkaran */
+  margin: 0 5px; /* Mengatur jarak antara tombol */
+  text-align: center; /* Mengatur penempatan ikon di tengah tombol */
+  line-height: 40px; /* Mengatur penempatan ikon di tengah tombol */
+}
+
+.icon-button svg {
+  width: 40px; /* Lebar ikon */
+  height: 40px; /* Tinggi ikon */
+  fill: #000000; /* Warna ikon */
+}
+
+.icon-button svg:hover {
+  width: 50px; /* Lebar ikon */
+  height: 50px; /* Tinggi ikon */
+  fill: #000000; /* Warna ikon */
+  position: relative;
+}
+
+#clock {
+  font-family: 'Orbitron', sans-serif;;
+  font-size: 40px;
+  color: #000000;
+  padding: 20px;
+}
+
+.profil-img {
+  size: 500px;
+}
+
+#floating-button {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  /* Replace with the actual path to your image if needed */
+  background-image: url("/img/navbot.png");
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  transition: all 0.3s ease-in-out;
+}
+
+
+#floating-button:hover {
+  width: 200px; /* Lebar saat navbar ditampilkan */
+  background-image: none;
+}
+
+#floating-navbar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 60%;
+}
+
+#floating-button:hover #floating-navbar {
+  opacity: 1;
+  visibility: visible;
+}
+
+#floating-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#floating-navbar li {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+#floating-navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #000000;
+}
+
+#floating-navbar a:hover {
+  background-color: #999;
+}
+
+  /* Customize the carousel styles here */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 calc(100% / 3); /* Tampilkan 3 item sekaligus */
+    max-width: calc(100% / 3);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#judulproject {
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 20px; /* Tambahkan padding untuk memberikan ruang pada paragraf */
+  font-size: 14px; /* Ganti ukuran font sesuai kebutuhan */
+  color: #333; /* Ganti warna teks sesuai kebutuhan */
+  line-height: 1.5; /* Sesuaikan jarak antarbaris sesuai kebutuhan */
+  background-color: #fff;
+}
+
+#caption {
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 20px; /* Tambahkan padding untuk memberikan ruang pada paragraf */
+  font-size: 14px; /* Ganti ukuran font sesuai kebutuhan */
+  color: #333; /* Ganti warna teks sesuai kebutuhan */
+  line-height: 1.5; /* Sesuaikan jarak antarbaris sesuai kebutuhan */
+  background-color: #fff;
+}
+
+/* ------------------ RESPONSIVE laptop 1024p ------------------------ */
+@media screen and (max-width: 1025px) {
+  .carousel-item {
+    flex: 0 0 33.33%; /* Tampilkan 3 item sekaligus */
+    max-width: 33.33%;
+  }
+
+  #clock {
+    font-family: 'Orbitron', sans-serif;;
+    font-size: 25px;
+    color: #000000;
+    padding: 15px;
+  }
+
+  .icon-button {
+    display: inline-block;
+    width: 30px; /* Lebar tombol */
+    height: 30px; /* Tinggi tombol */
+    background-color: #ffffff; /* Warna latar belakang */
+    border-radius: 50%; /* Mengatur border radius agar menjadi lingkaran */
+    margin: 0 5px; /* Mengatur jarak antara tombol */
+    text-align: center; /* Mengatur penempatan ikon di tengah tombol */
+    line-height: 30px; /* Mengatur penempatan ikon di tengah tombol */
+  }
+  
+  .icon-button svg {
+    width: 30px; /* Lebar ikon */
+    height: 30px; /* Tinggi ikon */
+    fill: #000000; /* Warna ikon */
+  }
+  
+  .icon-button svg:hover {
+    width: 35px; /* Lebar ikon */
+    height: 35px; /* Tinggi ikon */
+    fill: #000000; /* Warna ikon */
+    position: relative;
+  }
+  
+}
+
+/* ------------------ RESPONSIVE tablet 770p ------------------------ */
+
+
+@media screen and (max-width: 770px) {
+
+  #home {
+    background-image: url('/img/bgtab.jpg'); 
+    background-size: contain;
+   }
+
+  .carousel-item {
+    flex: 0 0 33.33%; /* Tampilkan 3 item sekaligus */
+    max-width: 33.33%;
+  }
+
+  #clock {
+    font-family: 'Orbitron', sans-serif;;
+    font-size: 25px;
+    color: #000000;
+    padding: 15px;
+  }
+  #name {
+    width: inherit;
+    height: inherit;
+  }
+  
+}
+
+/* ------------------ RESPONSIVE mobile ------------------------ */
+
+
+@media screen and (max-width: 500px) {
+  #home {
+    background-image: url('/img/bgmobile.jpg'); 
+    background-size: contain;
+   }
+   
+   #floating-button {
+    visibility: hidden;
+   }
+
+   #clock {
+   display: none;
+  }
+  
+  #name {
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  #kotak1 {
+    visibility: hidden;
+   }
+   
+   #kotak2 {
+    padding-bottom:  70px;
+    background-size: inherit;
+   }
+   
+   #gambarprofil {
+    display: none;
+   }
+
+   .carousel-item {
+    flex: 0 0 100%; /* Hanya satu item yang ditampilkan dalam satu baris pada layar kecil */
+    max-width: 100%;
+
+}
+ #edupic {
+  width: 30px;
+  height: 30px;
+ }
+
+ .icon-button {
+  display: inline-block;
+  width: 30px; /* Lebar tombol */
+  height: 30px; /* Tinggi tombol */
+  background-color: #ffffff; /* Warna latar belakang */
+  border-radius: 50%; /* Mengatur border radius agar menjadi lingkaran */
+  margin:  5px; /* Mengatur jarak antara tombol */
+  text-align: center; /* Mengatur penempatan ikon di tengah tombol */
+  line-height: 30px; /* Mengatur penempatan ikon di tengah tombol */
+}
+
+.icon-button svg {
+  width: 30px; /* Lebar ikon */
+  height: 30px; /* Tinggi ikon */
+  fill: #000000; /* Warna ikon */
+}
+
+.icon-button svg:hover {
+  width: 35px; /* Lebar ikon */
+  height: 35px; /* Tinggi ikon */
+  fill: #000000; /* Warna ikon */
+  position: relative;
+}
+
+#eb {
+  font-size: medium;
+}
+}
