@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    .sidebar {
+        height: 100%;
+        width: 250px;
+        background-color: #2d3436;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar .profile-info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sidebar .profile-info img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+    .sidebar .profile-info p {
+        margin: 5px 0;
+        color: #b2bec3;
+    }
+    .sidebar .menu-item {
+        padding: 15px 10px;
+        margin: 5px 20px;
+        text-align: center;
+        background-color: #636e72;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .sidebar .menu-item:hover {
+        background-color: #0984e3;
+    }
+    .sidebar .menu-item i {
+        margin-right: 10px;
+    }
+    .content {
+        margin-left: 270px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: margin-left 0.3s;
+    }
+    .welcome-message {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #2d3436;
+    }
+    .form-container {
+        display: none;
+        margin-top: 20px;
+    }
+    .form-container h3 {
+        font-size: 20px;
+        color: #2d3436;
+        margin-bottom: 10px;
+    }
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-container label {
+        margin: 10px 0 5px;
+        color: #2d3436;
+    }
+    .form-container input, .form-container textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #dfe6e9;
+        border-radius: 5px;
+    }
+    .form-container input[type="submit"] {
+        background-color: #0984e3;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .form-container input[type="submit"]:hover {
+        background-color: #74b9ff;
+    }
+    .logout {
+        position: fixed;
+        bottom: 20px;
+        width: 250px;
+        text-align: center;
+        background-color: #d63031;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .logout:hover {
+        background-color: #e17055;
+    }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="profile-info">
+        <img src="https://via.placeholder.com/80" alt="Profile Picture">
+        <p>Username</p>
+        <p>Email</p>
+    </div>
+    <div class="menu-item" onclick="showForm('berita')">
+        <i class="fa fa-newspaper"></i> Input Berita
+    </div>
+    <div class="menu-item" onclick="showForm('artikel')">
+        <i class="fa fa-edit"></i> Input Artikel
+    </div>
+</div>
+
+<div class="content">
+    <div class="welcome-message">
+        Selamat Datang di Dashboard Admin
+    </div>
+    <div id="formBerita" class="form-container">
+        <h3>Input Berita</h3>
+        <form>
+            <label for="judulBerita">Judul:</label>
+            <input type="text" id="judulBerita" name="judulBerita">
+            <label for="isiBerita">Isi Berita:</label>
+            <textarea id="isiBerita" name="isiBerita" rows="5"></textarea>
+            <label for="gambarBerita1">Gambar1:</label>
+            <input type="file" id="gambarBerita1" name="gambarBerita1">
+            <label for="gambarBerita2">Gambar2:</label>
+            <input type="file" id="gambarBerita2" name="gambarBerita2">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="formArtikel" class="form-container">
+        <h3>Input Artikel</h3>
+        <form>
+            <label for="judulArtikel">Judul:</label>
+            <input type="text" id="judulArtikel" name="judulArtikel">
+            <label for="isiArtikel">Isi Artikel:</label>
+            <textarea id="isiArtikel" name="isiArtikel" rows="5"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+<div class="logout" onclick="logOut()">
+    <i class="fa fa-sign-out-alt"></i> Log Out
+</div>
+    
+<script>
+    function showForm(formType) {
+        document.getElementById('formBerita').style.display = 'none';
+        document.getElementById('formArtikel').style.display = 'none';
+
+        if (formType === 'berita') {
+            document.getElementById('formBerita').style.display = 'block';
+        } else if (formType === 'artikel') {
+            document.getElementById('formArtikel').style.display = 'block';
+        }
+    }
+
+    function logOut() {
+        alert('Anda berhasil log out');
+        window.location.href = 'login.html';
+    }
+</script>
+
+</body>
+</html>

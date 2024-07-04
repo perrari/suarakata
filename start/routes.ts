@@ -31,3 +31,12 @@ Route.get('/contoh', async ({ view }) => {
 Route.get('/demo', async ({ view }) => {
   return view.render('demo')
 })
+
+
+Route.get('/login', async ({ view }) => {
+  return view.render('login')
+})
+
+Route.get('/dashboard', async ({ view }) => {
+  return view.render('dashboard')
+})
