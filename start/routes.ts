@@ -27,12 +27,6 @@ Route.get('/contoh', async ({ view }) => {
   return view.render('contoh')
 })
 
-
-Route.get('/demo', async ({ view }) => {
-  return view.render('demo')
-})
-
-
 Route.get('/login', async ({ view }) => {
   return view.render('login')
 })
@@ -40,3 +34,6 @@ Route.get('/login', async ({ view }) => {
 Route.get('/dashboard', async ({ view }) => {
   return view.render('dashboard')
 })
+
+Route.post('/databerita', 'BeritacontrolersController.store')
+Route.get('/berita', 'PageberitaController.store')
